@@ -29,7 +29,8 @@ class PostViewModelTest {
     Unit testing code that uses coroutines requires some extra attention,
     as their execution can be asynchronous and happen across multiple threads.
     This guide covers how suspending functions can be tested,
-    the testing constructs you need to be familiar with, and how to make your code that uses coroutines testable.
+    the testing constructs you need to
+    be familiar with, and how to make your code that uses coroutines testable.
     */
     @OptIn(ExperimentalCoroutinesApi::class)
     @get:Rule
@@ -59,7 +60,9 @@ class PostViewModelTest {
     @Test
     fun `fetchPosts success`() = testDispatcher.run {
         // Mock data
-        val posts = listOf(Post(1, 1, "Title 1", "Body 1"), Post(2, 2, "Title 2", "Body 2"))
+        val posts = listOf(Post(1, 1,
+            "Title 1", "Body 1"),
+            Post(2, 2, "Title 2", "Body 2"))
 
         // Mock repository behavior
         coEvery { postRepository.getPosts() } returns posts

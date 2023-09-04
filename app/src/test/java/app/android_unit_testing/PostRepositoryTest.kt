@@ -28,7 +28,8 @@ class PostRepositoryTest {
     @Test
     fun `getPosts success`() = runBlocking {
         // Mock response data
-        val posts = listOf(Post(1,1, "Title 1", "Body 1"),
+        val posts = listOf(Post(1,1, "Title 1",
+            "Body 1"),
             Post(2,2, "Title 2", "Body 2"))
 
         // Mock ApiService behavior

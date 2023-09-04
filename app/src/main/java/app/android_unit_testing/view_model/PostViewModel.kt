@@ -12,7 +12,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class PostViewModel @Inject
-constructor(private val postRepository: PostRepository) : ViewModel() {
+constructor(private val postRepository: PostRepository)
+    : ViewModel() {
 
     private val _posts = MutableLiveData<List<Post>>()
     val posts: LiveData<List<Post>> = _posts
